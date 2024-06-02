@@ -1,0 +1,3 @@
+/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/execfile.dir
+/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/edit_cache.dir
+/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/rebuild_cache.dir
