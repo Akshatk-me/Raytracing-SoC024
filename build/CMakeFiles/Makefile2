@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/akshatk/Code/projects/Raytracing-SoC024/build
 
 # The main recursive "all" target.
 all: CMakeFiles/vecops.dir/all
+all: CMakeFiles/color.dir/all
 all: CMakeFiles/execfile.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/vecops.dir/clean
+clean: CMakeFiles/color.dir/clean
 clean: CMakeFiles/execfile.dir/clean
 .PHONY : clean
 
@@ -83,7 +85,7 @@ clean: CMakeFiles/execfile.dir/clean
 CMakeFiles/vecops.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=3,4 "Built target vecops"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=5,6 "Built target vecops"
 .PHONY : CMakeFiles/vecops.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,18 +105,45 @@ CMakeFiles/vecops.dir/clean:
 .PHONY : CMakeFiles/vecops.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/color.dir
+
+# All Build rule for target.
+CMakeFiles/color.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=1,2 "Built target color"
+.PHONY : CMakeFiles/color.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/color.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
+.PHONY : CMakeFiles/color.dir/rule
+
+# Convenience name for target.
+color: CMakeFiles/color.dir/rule
+.PHONY : color
+
+# clean rule for target.
+CMakeFiles/color.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/clean
+.PHONY : CMakeFiles/color.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/execfile.dir
 
 # All Build rule for target.
 CMakeFiles/execfile.dir/all: CMakeFiles/vecops.dir/all
+CMakeFiles/execfile.dir/all: CMakeFiles/color.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=1,2 "Built target execfile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=3,4 "Built target execfile"
 .PHONY : CMakeFiles/execfile.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/execfile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/execfile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
 .PHONY : CMakeFiles/execfile.dir/rule

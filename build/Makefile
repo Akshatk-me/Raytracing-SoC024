@@ -130,6 +130,19 @@ vecops/fast:
 .PHONY : vecops/fast
 
 #=============================================================================
+# Target rules for targets named color
+
+# Build rule for target.
+color: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color
+.PHONY : color
+
+# fast build rule for target.
+color/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
+.PHONY : color/fast
+
+#=============================================================================
 # Target rules for targets named execfile
 
 # Build rule for target.
@@ -141,6 +154,30 @@ execfile: cmake_check_build_system
 execfile/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/build
 .PHONY : execfile/fast
+
+home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o
+
+# target to build an object file
+home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
+
+home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i
+
+# target to preprocess a source file
+home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
+
+home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s
+
+# target to generate assembly for a file
+home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o
@@ -198,8 +235,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... color"
 	@echo "... execfile"
 	@echo "... vecops"
+	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o"
+	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i"
+	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s"

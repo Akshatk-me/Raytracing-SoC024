@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcolor.a "CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o"
+/usr/bin/ranlib libcolor.a
