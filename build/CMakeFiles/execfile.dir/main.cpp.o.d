@@ -1,7 +1,7 @@
 CMakeFiles/execfile.dir/main.cpp.o: \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/color.h \
  /usr/include/c++/14.1.1/iostream \
  /usr/include/c++/14.1.1/bits/requires_hosted.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -139,4 +139,10 @@ CMakeFiles/execfile.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/locale_facets.tcc \
  /usr/include/c++/14.1.1/bits/basic_ios.tcc \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/bits/istream.tcc
+ /usr/include/c++/14.1.1/bits/istream.tcc \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
+ /usr/include/c++/14.1.1/fstream /usr/include/c++/14.1.1/bits/codecvt.h \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/14.1.1/bits/fstream.tcc

@@ -4,4 +4,4 @@
 
 using color = vec;
 
-void writeColor(std::ostream &ost, color &pixel_color);
+void writePixel(std::ostream &ost, color &pixel_color);

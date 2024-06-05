@@ -1,6 +1,6 @@
 #include "../include/color.h"
 
-void writeColor(std::ostream &out, color &pixel_color) {
+void writePixel(std::ostream &out, color &pixel_color) {
   auto r = pixel_color.x();
   auto g = pixel_color.y();
   auto b = pixel_color.z();
