@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named vecops
+
+# Build rule for target.
+vecops: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecops
+.PHONY : vecops
+
+# fast build rule for target.
+vecops/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/build
+.PHONY : vecops/fast
+
+#=============================================================================
 # Target rules for targets named execfile
 
 # Build rule for target.
@@ -128,6 +141,30 @@ execfile: cmake_check_build_system
 execfile/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/build
 .PHONY : execfile/fast
+
+home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o
+
+# target to build an object file
+home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
+
+home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i
+
+# target to preprocess a source file
+home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
+
+home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s
+
+# target to generate assembly for a file
+home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
+.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -162,6 +199,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... execfile"
+	@echo "... vecops"
+	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o"
+	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i"
+	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

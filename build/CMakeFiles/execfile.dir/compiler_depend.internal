@@ -3,6 +3,7 @@
 
 CMakeFiles/execfile.dir/main.cpp.o
  /home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp
+ /home/akshatk/Code/projects/Raytracing-SoC024/include/vecops.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

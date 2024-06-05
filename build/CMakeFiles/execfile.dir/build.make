@@ -92,6 +92,7 @@ execfile_EXTERNAL_OBJECTS =
 
 execfile: CMakeFiles/execfile.dir/main.cpp.o
 execfile: CMakeFiles/execfile.dir/build.make
+execfile: libvecops.a
 execfile: CMakeFiles/execfile.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable execfile"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/execfile.dir/link.txt --verbose=$(VERBOSE)

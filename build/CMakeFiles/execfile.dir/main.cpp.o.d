@@ -1,6 +1,8 @@
 CMakeFiles/execfile.dir/main.cpp.o: \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/14.1.1/iostream \
+ /usr/include/stdc-predef.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
+ /usr/include/c++/14.1.1/iostream \
  /usr/include/c++/14.1.1/bits/requires_hosted.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
