@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/execfile.dir/main.cpp.o -o execfile  libvecops.a libcolor.a
+/usr/bin/c++ CMakeFiles/execfile.dir/main.cpp.o -o execfile  libmylib.a

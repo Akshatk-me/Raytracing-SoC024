@@ -117,50 +117,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vecops
+# Target rules for targets named mylib
 
 # Build rule for target.
-vecops: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecops
-.PHONY : vecops
+mylib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mylib
+.PHONY : mylib
 
 # fast build rule for target.
-vecops/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/build
-.PHONY : vecops/fast
+mylib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/build
+.PHONY : mylib/fast
 
 #=============================================================================
-# Target rules for targets named color
+# Target rules for targets named bin
 
 # Build rule for target.
-color: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color
-.PHONY : color
+bin: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin
+.PHONY : bin
 
 # fast build rule for target.
-color/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
-.PHONY : color/fast
-
-#=============================================================================
-# Target rules for targets named execfile
-
-# Build rule for target.
-execfile: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 execfile
-.PHONY : execfile
-
-# fast build rule for target.
-execfile/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/build
-.PHONY : execfile/fast
+bin/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/build
+.PHONY : bin/fast
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o
 
 # target to build an object file
 home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
@@ -168,7 +155,7 @@ home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i: home/akshatk/Code/proj
 
 # target to preprocess a source file
 home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
@@ -176,7 +163,7 @@ home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s: home/akshatk/Code/proj
 
 # target to generate assembly for a file
 home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
@@ -184,7 +171,7 @@ home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o: home/akshatk/Code/pro
 
 # target to build an object file
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
@@ -192,7 +179,7 @@ home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i: home/akshatk/Code/pro
 
 # target to preprocess a source file
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.i
 
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
@@ -200,7 +187,7 @@ home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s: home/akshatk/Code/pro
 
 # target to generate assembly for a file
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
 
 main.o: main.cpp.o
@@ -208,7 +195,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -216,7 +203,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -224,7 +211,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -235,9 +222,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... color"
-	@echo "... execfile"
-	@echo "... vecops"
+	@echo "... bin"
+	@echo "... mylib"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s"

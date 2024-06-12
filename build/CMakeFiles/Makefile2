@@ -63,9 +63,8 @@ CMAKE_BINARY_DIR = /home/akshatk/Code/projects/Raytracing-SoC024/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/vecops.dir/all
-all: CMakeFiles/color.dir/all
-all: CMakeFiles/execfile.dir/all
+all: CMakeFiles/mylib.dir/all
+all: CMakeFiles/bin.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,89 +72,61 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/vecops.dir/clean
-clean: CMakeFiles/color.dir/clean
-clean: CMakeFiles/execfile.dir/clean
+clean: CMakeFiles/mylib.dir/clean
+clean: CMakeFiles/bin.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/vecops.dir
+# Target rules for target CMakeFiles/mylib.dir
 
 # All Build rule for target.
-CMakeFiles/vecops.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=5,6 "Built target vecops"
-.PHONY : CMakeFiles/vecops.dir/all
+CMakeFiles/mylib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=3,4,5 "Built target mylib"
+.PHONY : CMakeFiles/mylib.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/vecops.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vecops.dir/all
+CMakeFiles/mylib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mylib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
-.PHONY : CMakeFiles/vecops.dir/rule
+.PHONY : CMakeFiles/mylib.dir/rule
 
 # Convenience name for target.
-vecops: CMakeFiles/vecops.dir/rule
-.PHONY : vecops
+mylib: CMakeFiles/mylib.dir/rule
+.PHONY : mylib
 
 # clean rule for target.
-CMakeFiles/vecops.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vecops.dir/build.make CMakeFiles/vecops.dir/clean
-.PHONY : CMakeFiles/vecops.dir/clean
+CMakeFiles/mylib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/clean
+.PHONY : CMakeFiles/mylib.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/color.dir
+# Target rules for target CMakeFiles/bin.dir
 
 # All Build rule for target.
-CMakeFiles/color.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=1,2 "Built target color"
-.PHONY : CMakeFiles/color.dir/all
+CMakeFiles/bin.dir/all: CMakeFiles/mylib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=1,2 "Built target bin"
+.PHONY : CMakeFiles/bin.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/color.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color.dir/all
+CMakeFiles/bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
-.PHONY : CMakeFiles/color.dir/rule
+.PHONY : CMakeFiles/bin.dir/rule
 
 # Convenience name for target.
-color: CMakeFiles/color.dir/rule
-.PHONY : color
+bin: CMakeFiles/bin.dir/rule
+.PHONY : bin
 
 # clean rule for target.
-CMakeFiles/color.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/clean
-.PHONY : CMakeFiles/color.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/execfile.dir
-
-# All Build rule for target.
-CMakeFiles/execfile.dir/all: CMakeFiles/vecops.dir/all
-CMakeFiles/execfile.dir/all: CMakeFiles/color.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=3,4 "Built target execfile"
-.PHONY : CMakeFiles/execfile.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/execfile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/execfile.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
-.PHONY : CMakeFiles/execfile.dir/rule
-
-# Convenience name for target.
-execfile: CMakeFiles/execfile.dir/rule
-.PHONY : execfile
-
-# clean rule for target.
-CMakeFiles/execfile.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/execfile.dir/build.make CMakeFiles/execfile.dir/clean
-.PHONY : CMakeFiles/execfile.dir/clean
+CMakeFiles/bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/clean
+.PHONY : CMakeFiles/bin.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

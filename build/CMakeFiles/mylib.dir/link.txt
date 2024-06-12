@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmylib.a "CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o" "CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o"
+/usr/bin/ranlib libmylib.a

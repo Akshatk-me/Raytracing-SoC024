@@ -1,5 +1,4 @@
-/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/vecops.dir
-/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/color.dir
-/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/execfile.dir
+/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/mylib.dir
+/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/bin.dir
 /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/edit_cache.dir
 /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles/rebuild_cache.dir
