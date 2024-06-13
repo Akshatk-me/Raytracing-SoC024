@@ -141,6 +141,7 @@ CMakeFiles/bin.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/ray.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
  /usr/include/c++/14.1.1/fstream /usr/include/c++/14.1.1/bits/codecvt.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
