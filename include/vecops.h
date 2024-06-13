@@ -19,13 +19,37 @@ public:
   double magnitude() const;
   vec direction() const;
 };
-inline vec operator+(const vec &v1, const vec &v2); // vector addition
-inline vec operator-(const vec &v1, const vec &v2);
-inline vec operator*(const vec &v, const double t); // scalar multiplication
-inline vec operator/(const vec &v, const double t); // scalar division
-std::ostream &operator<<(std::ostream &ost, vec v);
 
-inline double dot(const vec &v1, const vec &v2); // scalar product of two
-                                                 // vectors
-vec cross(const vec &v1, const vec &v2);         // vector product
+inline vec operator+(const vec &v1, const vec &v2) {
+  return vec(v1.x() + v2.x(), v1.y() + v2.y(), v1.z() + v2.z());
+}
+inline vec operator-(const vec &v1, const vec &v2) {
+  return vec(v1.x() - v2.x(), v1.y() - v2.y(), v1.z() - v2.z());
+}
+inline vec operator*(const vec &v, const double t) {
+  return vec(v.x() * t, v.y() * t, v.z() * t);
+} // scalar multiplication
+inline vec operator/(const vec &v, const double t) {
+  return v * (1.0 / t);
+}; // scalar division
+
+inline std::ostream &operator<<(std::ostream &ost, const vec &v) {
+  ost << v.x() << ' ' << v.y() << ' ' << v.z() << ' ';
+  return ost;
+}
+
+inline double dot(const vec &v1, const vec &v2) {
+  return (v1.x() * v2.x() + v2.x() * v2.y() + v1.z() * v2.z());
+}
+
+inline vec cross(const vec &v1, const vec &v2) {
+  double x = v1.y() * v2.z() - v1.z() * v2.y();
+  double y = v1.z() * v2.x() - v1.x() * v2.z();
+  double z = v1.x() * v2.y() - v1.y() * v2.x();
+  vec t = vec();
+  return vec(x, y, z);
+}
+
+using point = vec;
+
 #endif

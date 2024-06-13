@@ -1,5 +1,7 @@
 #include "../include/color.h"
+#include "../include/ray.h"
 #include "../include/vecops.h"
+
 #include <fstream>
 #include <iostream>
 
@@ -23,6 +25,10 @@ int main() {
     myfile << '\n';
   }
   myfile.close();
-  vec t = vec(1, 1, 1);
   std::clog << "\rDone. \n";
+  vec t = vec(1, 1, 1);
+  point x = point();
+
+  ray beam = ray(x, t);
+  std::cout << beam.at(10);
 }

@@ -43,32 +43,4 @@ vec vec::direction() const {
   return vec(value[0] / mag, value[1] / mag, value[2] / mag);
 }
 
-inline vec operator+(const vec &v1, const vec &v2) {
-  return vec(v1.x() + v2.x(), v1.y() + v2.y(), v1.z() + v2.z());
-}
-inline vec operator-(const vec &v1, const vec &v2) {
-  return vec(v1.x() - v2.x(), v1.y() - v2.y(), v1.z() - v2.z());
-}
-inline vec operator*(const vec &v, const double t) {
-  return vec(v.x() * t, v.y() * t, v.z() * t);
-} // scalar multiplication
-inline vec operator/(const vec &v, const double t) {
-  return v * (1.0 / t);
-}; // scalar division
-
-inline std::ostream &operator<<(std::ostream &ost, const vec &v) {
-  ost << v.x() << ' ' << v.y() << ' ' << v.z() << ' ';
-  return ost;
-}
-
-inline double dot(const vec &v1, const vec &v2) {
-  return (v1.x() * v2.x() + v2.x() * v2.y() + v1.z() * v2.z());
-}
-
-vec cross(const vec &v1, const vec &v2) {
-  double x = v1.y() * v2.z() - v1.z() * v2.y();
-  double y = v1.z() * v2.x() - v1.x() * v2.z();
-  double z = v1.x() * v2.y() - v1.y() * v2.x();
-  vec t = vec();
-  return vec(x, y, z);
-}
+// point is an alias for vec, it's better for providing geometric clarity
