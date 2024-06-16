@@ -29,6 +29,9 @@ inline vec operator-(const vec &v1, const vec &v2) {
 inline vec operator*(const vec &v, const double t) {
   return vec(v.x() * t, v.y() * t, v.z() * t);
 } // scalar multiplication
+inline vec operator*(const double t, const vec &v) {
+  return vec(v.x() * t, v.y() * t, v.z() * t);
+}
 inline vec operator/(const vec &v, const double t) {
   return v * (1.0 / t);
 }; // scalar division

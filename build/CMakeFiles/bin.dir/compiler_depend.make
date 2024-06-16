@@ -3,6 +3,7 @@
 
 CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/color.h \
+  /home/akshatk/Code/projects/Raytracing-SoC024/include/ray.h \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/vecops.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -280,19 +281,13 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/c++/14.1.1/cstdio:
 
+/usr/include/c++/14.1.1/cerrno:
+
 /usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/types/time_t.h:
 
 /usr/include/c++/14.1.1/bits/move.h:
-
-/usr/include/bits/types/struct_tm.h:
-
-/usr/include/bits/wchar.h:
-
-/usr/include/c++/14.1.1/bit:
-
-/usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/14.1.1/string:
 
@@ -307,10 +302,6 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/include/c++/14.1.1/bits/exception_defines.h:
-
-/usr/include/bits/types/wint_t.h:
-
-/home/akshatk/Code/projects/Raytracing-SoC024/include/color.h:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -384,31 +375,43 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/bits/time64.h:
 
-/usr/include/c++/14.1.1/stdexcept:
-
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/time.h:
-
-/usr/include/bits/locale.h:
-
-/home/akshatk/Code/projects/Raytracing-SoC024/include/vecops.h:
-
-/usr/include/c++/14.1.1/bits/allocator.h:
-
 /usr/include/bits/stdint-intn.h:
 
-/usr/include/c++/14.1.1/bits/memory_resource.h:
+/home/akshatk/Code/projects/Raytracing-SoC024/include/color.h:
 
-/usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
+/usr/include/bits/types/wint_t.h:
 
 /usr/include/c++/14.1.1/bits/functional_hash.h:
 
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/long-double.h:
+
+/usr/include/bits/types/struct_tm.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/c++/14.1.1/bit:
+
+/usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/14.1.1/bits/memory_resource.h:
+
+/usr/include/bits/types/struct_timeval.h:
+
+/usr/include/c++/14.1.1/stdexcept:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/locale.h:
+
+/home/akshatk/Code/projects/Raytracing-SoC024/include/vecops.h:
+
+/usr/include/c++/14.1.1/bits/allocator.h:
 
 /usr/include/bits/types/mbstate_t.h:
 
@@ -508,8 +511,6 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/c++/14.1.1/bits/basic_string.h:
 
-/usr/include/c++/14.1.1/cerrno:
-
 /usr/include/c++/14.1.1/bits/basic_string.tcc:
 
 /usr/include/c++/14.1.1/bits/char_traits.h:
@@ -555,6 +556,8 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 /usr/include/c++/14.1.1/bits/ptr_traits.h:
 
 /usr/include/sys/single_threaded.h:
+
+/home/akshatk/Code/projects/Raytracing-SoC024/include/ray.h:
 
 /usr/include/c++/14.1.1/bits/refwrap.h:
 
