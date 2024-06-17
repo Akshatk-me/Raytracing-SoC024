@@ -14,10 +14,10 @@ double hit_sphere(const point &center, double radius, const ray &r) {
 
   // all these auto variables are "double" at the time of writing this
   auto a = r.getDirection().magnitudeSquared();
-  auto b = -2.0 * dot(r.getDirection(), OC);
+  auto h = dot(r.getDirection(), OC);
   auto c = OC.magnitudeSquared() - radius * radius;
 
-  auto discriminant = b * b - 4 * a * c;
+  auto discriminant = h * h - a * c; // psuedo discriminant
 
   // return the smaller (closer) value of t.
   // The reason t will never be -1 is because any -ve t would
@@ -26,7 +26,7 @@ double hit_sphere(const point &center, double radius, const ray &r) {
   if (discriminant < 0) {
     return -1.0;
   } else {
-    return (-b - sqrt(discriminant)) / (2.0 * a);
+    return (h - sqrt(discriminant)) / a;
   }
 }
 
