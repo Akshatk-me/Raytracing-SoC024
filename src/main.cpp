@@ -5,19 +5,26 @@
 #include <fstream>
 #include <iostream>
 
-inline double abs(double a) {
-  if (a >= 0) {
-    return a;
-  } else {
-    return -a;
-  }
+// just a absolute value function of double.
+inline double abs(double a) { return (a >= 0) ? a : -a; }
+
+bool hit_sphere(const point &center, double radius, const ray &r) {
+  vec OC = center - r.getOrigin();
+  auto a = r.getDirection().magnitudeSquared();
+  auto b = 2.0 * dot(r.getDirection(), OC);
+  auto c = OC.magnitudeSquared() - radius * radius;
+
+  return (b * b - 4 * a * c >= 0);
 }
 
-color ray_color(const ray &t) {
-  auto x = t.getDirection().direction();
-  x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
-  std::cout << x;
-  return x;
+color ray_color(const point &center, double radius, const ray &r) {
+  if (hit_sphere(center, radius, r)) {
+    return color(1, 0, 0);
+  } else {
+    auto x = r.getDirection().direction();
+    x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
+    return x;
+  }
 }
 
 int main() {
@@ -42,7 +49,7 @@ int main() {
 
   // Both these are magnitude and dirn of each pixel along u and v.
   auto pixel_delta_u = viewport_u / image_width;
-  auto pixel_delta_v = viewport_v / image_width;
+  auto pixel_delta_v = viewport_v / image_height;
 
   // Calculate the location of upper left pixel. fl, viewport_v are along -ve z.
   // camera center - focalLength - viewport_u/2 - viewport_v/2
@@ -66,11 +73,12 @@ int main() {
       vec ray_direction = pixel_center - camera_center;
       ray r(camera_center, pixel_center);
 
-      color pixel_color = ray_color(r);
+      color pixel_color = ray_color(point(0, 0, -1), 0.5, r);
       writePixel(myfile, pixel_color);
     }
     myfile << '\n';
   }
   myfile.close();
+
   std::clog << "\rDone. \n";
 }
