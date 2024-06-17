@@ -13,5 +13,5 @@ public:
   const point getOrigin() const { return origin; }
   const point getDirection() const { return direction; }
 
-  point at(const double t) { return origin + (direction * t); }
+  const point at(const double t) const { return origin + (direction * t); }
 };

@@ -2,24 +2,40 @@
 #include "../include/ray.h"
 #include "../include/vecops.h"
 
+#include <cmath>
 #include <fstream>
 #include <iostream>
 
 // just a absolute value function of double.
 inline double abs(double a) { return (a >= 0) ? a : -a; }
 
-bool hit_sphere(const point &center, double radius, const ray &r) {
+double hit_sphere(const point &center, double radius, const ray &r) {
   vec OC = center - r.getOrigin();
+
+  // all these auto variables are "double" at the time of writing this
   auto a = r.getDirection().magnitudeSquared();
-  auto b = 2.0 * dot(r.getDirection(), OC);
+  auto b = -2.0 * dot(r.getDirection(), OC);
   auto c = OC.magnitudeSquared() - radius * radius;
 
-  return (b * b - 4 * a * c >= 0);
+  auto discriminant = b * b - 4 * a * c;
+
+  // return the smaller (closer) value of t.
+  // The reason t will never be -1 is because any -ve t would
+  // mean a point behind the camera.
+
+  if (discriminant < 0) {
+    return -1.0;
+  } else {
+    return (-b - sqrt(discriminant)) / (2.0 * a);
+  }
 }
 
 color ray_color(const point &center, double radius, const ray &r) {
-  if (hit_sphere(center, radius, r)) {
-    return color(1, 0, 0);
+  auto t = hit_sphere(center, radius, r);
+  if (t > 0.0) {
+    vec N = (r.at(t) - center).direction();
+    // convert (-1,1) -> (0,1)
+    return 0.5 * color(N.x() + 1, N.y() + 1, N.z() + 1);
   } else {
     auto x = r.getDirection().direction();
     x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
@@ -73,7 +89,9 @@ int main() {
       vec ray_direction = pixel_center - camera_center;
       ray r(camera_center, pixel_center);
 
-      color pixel_color = ray_color(point(0, 0, -1), 0.5, r);
+      color pixel_color =
+          ray_color(camera_center - vec(0, 0, focalLength), 0.5, r);
+
       writePixel(myfile, pixel_color);
     }
     myfile << '\n';
