@@ -1,10 +1,5 @@
-#include "../include/color.h"
-#include "../include/ray.h"
-#include "../include/vecops.h"
-
-#include <cmath>
-#include <fstream>
-#include <iostream>
+#include "../include/hittable.h"
+#include "../include/utils.h"
 
 // just a absolute value function of double.
 inline double abs(double a) { return (a >= 0) ? a : -a; }
@@ -30,12 +25,11 @@ double hit_sphere(const point &center, double radius, const ray &r) {
   }
 }
 
-color ray_color(const point &center, double radius, const ray &r) {
-  auto t = hit_sphere(center, radius, r);
-  if (t > 0.0) {
-    vec N = (r.at(t) - center).direction();
-    // convert (-1,1) -> (0,1)
-    return 0.5 * color(N.x() + 1, N.y() + 1, N.z() + 1);
+color ray_color(const ray &r, const hittable &world) {
+  hit_record rec;
+  interval ray_t(0, infinity);
+  if (world.hit(r, ray_t, rec)) {
+    return 0.5 * (rec.normal + color(1, 1, 1));
   } else {
     auto x = r.getDirection().direction();
     x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
@@ -72,6 +66,11 @@ int main() {
   point pixel00_loc =
       camera_center - vec(0, 0, focalLength) - viewport_u / 2 - viewport_v / 2;
 
+  // world
+  hittable_list world;
+  world.add(make_shared<sphere>(point(0, -100.5, -1), 100));
+  world.add(make_shared<sphere>(point(0, 0, -1), 0.5));
+
   // Open a file image.ppm
   std::ofstream myfile;
   myfile.open("image.ppm");
@@ -89,9 +88,7 @@ int main() {
       vec ray_direction = pixel_center - camera_center;
       ray r(camera_center, pixel_center);
 
-      color pixel_color =
-          ray_color(camera_center - vec(0, 0, focalLength), 0.5, r);
-
+      color pixel_color = ray_color(r, world);
       writePixel(myfile, pixel_color);
     }
     myfile << '\n';
