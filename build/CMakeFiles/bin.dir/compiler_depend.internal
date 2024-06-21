@@ -3,6 +3,7 @@
 
 CMakeFiles/bin.dir/main.cpp.o
  /home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp
+ /home/akshatk/Code/projects/Raytracing-SoC024/include/camera.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/color.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/hittable.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/ray.h

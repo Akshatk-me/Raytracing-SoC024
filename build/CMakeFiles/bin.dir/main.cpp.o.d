@@ -1,6 +1,7 @@
 CMakeFiles/bin.dir/main.cpp.o: \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp \
  /usr/include/stdc-predef.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/camera.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/hittable.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/ray.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/utils.h \

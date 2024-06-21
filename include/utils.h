@@ -19,6 +19,7 @@ const double pi = 3.1415926535897932385;
 
 // utility functions
 double degree_to_radians(double degree) { return (degree * pi / 180.0); }
+inline double abs(double a) { return (a >= 0) ? a : -a; }
 
 // common headers
 #include "color.h"
