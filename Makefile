@@ -8,7 +8,7 @@ TARGET_EXEC := $(BUILD_DIR)/bin
 
 SRCS := $(SRC_DIR)/main.cpp
 OBJS := $(patsubst $(SRC_DIR)%.cpp, $(BUILD_DIR)%.o,  $(SRCS))
-LIBSRC := $(LIB_DIR)/color.cpp $(LIB_DIR)/vecops.cpp
+LIBSRC := $(LIB_DIR)/vecops.cpp
 LIBOBJS := $(patsubst $(LIB_DIR)%.cpp, $(BUILD_DIR)%.o, $(LIBSRC))
 LIBS := $(patsubst $(LIB_DIR)/%.cpp, $(BUILD_DIR)/lib%.a, $(LIBSRC))
 

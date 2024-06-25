@@ -3,7 +3,7 @@ CMakeFiles/bin.dir/main.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/camera.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/hittable.h \
- /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/ray.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/interval.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/utils.h \
  /usr/include/c++/14.1.1/cmath \
  /usr/include/c++/14.1.1/bits/requires_hosted.h \
@@ -74,9 +74,9 @@ CMakeFiles/bin.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/tr1/poly_hermite.tcc \
  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
- /usr/include/c++/14.1.1/fstream /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/ios /usr/include/c++/14.1.1/iosfwd \
- /usr/include/c++/14.1.1/bits/stringfwd.h \
+ /usr/include/c++/14.1.1/cstdlib /usr/include/c++/14.1.1/fstream \
+ /usr/include/c++/14.1.1/istream /usr/include/c++/14.1.1/ios \
+ /usr/include/c++/14.1.1/iosfwd /usr/include/c++/14.1.1/bits/stringfwd.h \
  /usr/include/c++/14.1.1/bits/memoryfwd.h \
  /usr/include/c++/14.1.1/bits/postypes.h /usr/include/c++/14.1.1/cwchar \
  /usr/include/wchar.h \
@@ -129,9 +129,8 @@ CMakeFiles/bin.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/functional_hash.h \
  /usr/include/c++/14.1.1/bits/string_view.tcc \
  /usr/include/c++/14.1.1/ext/string_conversions.h \
- /usr/include/c++/14.1.1/cstdlib /usr/include/c++/14.1.1/cstdio \
- /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
- /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/c++/14.1.1/cstdio /usr/include/stdio.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/c++/14.1.1/cerrno \
@@ -186,8 +185,11 @@ CMakeFiles/bin.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/backward/auto_ptr.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
- /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/color.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/ray.h \
  /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/vecops.h \
  /usr/include/c++/14.1.1/vector /usr/include/c++/14.1.1/bits/stl_vector.h \
  /usr/include/c++/14.1.1/bits/stl_bvector.h \
- /usr/include/c++/14.1.1/bits/vector.tcc
+ /usr/include/c++/14.1.1/bits/vector.tcc \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/include_these.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/color.h \
+ /home/akshatk/Code/projects/Raytracing-SoC024/src/../include/include_these.h

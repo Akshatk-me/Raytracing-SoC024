@@ -142,30 +142,6 @@ bin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/build
 .PHONY : bin/fast
 
-home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
-.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o
-
-# target to build an object file
-home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
-.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
-
-home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
-.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i
-
-# target to preprocess a source file
-home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
-.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
-
-home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s: home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
-.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s
-
-# target to generate assembly for a file
-home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
-.PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
-
 home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o: home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
 .PHONY : home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o
 
@@ -224,9 +200,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bin"
 	@echo "... mylib"
-	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.o"
-	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.i"
-	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/color.s"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.o"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.i"
 	@echo "... home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.s"

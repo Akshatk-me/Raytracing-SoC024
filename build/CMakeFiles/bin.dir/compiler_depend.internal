@@ -6,6 +6,8 @@ CMakeFiles/bin.dir/main.cpp.o
  /home/akshatk/Code/projects/Raytracing-SoC024/include/camera.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/color.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/hittable.h
+ /home/akshatk/Code/projects/Raytracing-SoC024/include/include_these.h
+ /home/akshatk/Code/projects/Raytracing-SoC024/include/interval.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/ray.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/utils.h
  /home/akshatk/Code/projects/Raytracing-SoC024/include/vecops.h

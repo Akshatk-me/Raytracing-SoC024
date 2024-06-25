@@ -5,6 +5,8 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
   /home/akshatk/Code/projects/Raytracing-SoC024/include/camera.h \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/color.h \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/hittable.h \
+  /home/akshatk/Code/projects/Raytracing-SoC024/include/include_these.h \
+  /home/akshatk/Code/projects/Raytracing-SoC024/include/interval.h \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/ray.h \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/utils.h \
   /home/akshatk/Code/projects/Raytracing-SoC024/include/vecops.h \
@@ -410,9 +412,7 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/c++/14.1.1/bits/requires_hosted.h:
 
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/bits/atomic_wide_counter.h:
+/usr/include/c++/14.1.1/bits/range_access.h:
 
 /usr/include/bits/types/__FILE.h:
 
@@ -446,13 +446,13 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/bits/setjmp.h:
 
+/home/akshatk/Code/projects/Raytracing-SoC024/include/interval.h:
+
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr.h:
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
 /usr/include/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/c++/14.1.1/bits/range_access.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
@@ -474,11 +474,25 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/bits/types/timer_t.h:
 
+/usr/include/c++/14.1.1/ostream:
+
+/usr/include/c++/14.1.1/bits/unique_ptr.h:
+
+/usr/include/c++/14.1.1/bits/stl_iterator_base_funcs.h:
+
+/home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp:
+
+/usr/include/c++/14.1.1/bits/fstream.tcc:
+
 /usr/include/asm/errno.h:
 
 /usr/include/bits/endian.h:
 
 /usr/include/c++/14.1.1/bits/memoryfwd.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/bits/types/clockid_t.h:
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
@@ -502,23 +516,7 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/bits/types/__sigset_t.h:
 
-/usr/include/bits/stdlib-float.h:
-
-/usr/include/bits/time64.h:
-
 /usr/include/bits/fp-fast.h:
-
-/usr/include/bits/math-vector.h:
-
-/usr/include/c++/14.1.1/ostream:
-
-/usr/include/c++/14.1.1/bits/unique_ptr.h:
-
-/usr/include/c++/14.1.1/bits/stl_iterator_base_funcs.h:
-
-/home/akshatk/Code/projects/Raytracing-SoC024/src/main.cpp:
-
-/usr/include/c++/14.1.1/bits/fstream.tcc:
 
 /home/akshatk/Code/projects/Raytracing-SoC024/include/utils.h:
 
@@ -529,6 +527,16 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 /usr/include/ctype.h:
 
 /usr/include/bits/waitflags.h:
+
+/usr/include/bits/math-vector.h:
+
+/home/akshatk/Code/projects/Raytracing-SoC024/include/include_these.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/c++/14.1.1/bits/shared_ptr_atomic.h:
+
+/usr/include/bits/wctype-wchar.h:
 
 /home/akshatk/Code/projects/Raytracing-SoC024/include/color.h:
 
@@ -541,6 +549,10 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 /usr/include/c++/14.1.1/bits/refwrap.h:
 
 /home/akshatk/Code/projects/Raytracing-SoC024/include/ray.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/bits/time64.h:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -560,9 +572,9 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/bits/uintn-identity.h:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
-
 /home/akshatk/Code/projects/Raytracing-SoC024/include/camera.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/features.h:
 
@@ -648,12 +660,6 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/bits/waitstatus.h:
 
-/usr/include/sys/types.h:
-
-/usr/include/c++/14.1.1/bits/shared_ptr_atomic.h:
-
-/usr/include/bits/wctype-wchar.h:
-
 /usr/include/bits/wordsize.h:
 
 /usr/include/c++/14.1.1/concepts:
@@ -688,11 +694,11 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/c++/14.1.1/bits/basic_ios.tcc:
 
-/usr/include/bits/types/clock_t.h:
-
 /usr/include/bits/mathcalls.h:
 
 /usr/include/bits/types/__fpos_t.h:
+
+/usr/include/bits/types/clock_t.h:
 
 /usr/include/c++/14.1.1/bits/exception_ptr.h:
 
@@ -742,10 +748,10 @@ CMakeFiles/bin.dir/main.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/src
 
 /usr/include/c++/14.1.1/bits/locale_facets.tcc:
 
-/usr/include/c++/14.1.1/bits/nested_exception.h:
-
-/usr/include/c++/14.1.1/bits/new_allocator.h:
+/usr/include/c++/14.1.1/bits/ptr_traits.h:
 
 /usr/include/c++/14.1.1/bits/localefwd.h:
 
-/usr/include/c++/14.1.1/bits/ptr_traits.h:
+/usr/include/c++/14.1.1/bits/nested_exception.h:
+
+/usr/include/c++/14.1.1/bits/new_allocator.h:

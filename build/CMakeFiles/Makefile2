@@ -83,12 +83,12 @@ clean: CMakeFiles/bin.dir/clean
 CMakeFiles/mylib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylib.dir/build.make CMakeFiles/mylib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=3,4,5 "Built target mylib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=3,4 "Built target mylib"
 .PHONY : CMakeFiles/mylib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mylib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mylib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
 .PHONY : CMakeFiles/mylib.dir/rule
@@ -114,7 +114,7 @@ CMakeFiles/bin.dir/all: CMakeFiles/mylib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles 0
 .PHONY : CMakeFiles/bin.dir/rule

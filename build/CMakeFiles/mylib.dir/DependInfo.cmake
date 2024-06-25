@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp" "CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o" "gcc" "CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o.d"
   "/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp" "CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o" "gcc" "CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o.d"
   )
 

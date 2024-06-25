@@ -1,5 +1,6 @@
 #pragma once
 
+#include "interval.h"
 #include "ray.h"
 #include <cmath>
 #include <memory>

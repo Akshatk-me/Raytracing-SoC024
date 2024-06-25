@@ -83,33 +83,17 @@ CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp -o CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.s
 
-CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o: CMakeFiles/mylib.dir/flags.make
-CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o: /home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp
-CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o: CMakeFiles/mylib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o -MF CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o.d -o CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o -c /home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp
-
-CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp > CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.i
-
-CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp -o CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.s
-
 # Object files for target mylib
 mylib_OBJECTS = \
-"CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o" \
-"CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o"
+"CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o"
 
 # External object files for target mylib
 mylib_EXTERNAL_OBJECTS =
 
 libmylib.a: CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/vecops.cpp.o
-libmylib.a: CMakeFiles/mylib.dir/home/akshatk/Code/projects/Raytracing-SoC024/lib/color.cpp.o
 libmylib.a: CMakeFiles/mylib.dir/build.make
 libmylib.a: CMakeFiles/mylib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmylib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/akshatk/Code/projects/Raytracing-SoC024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmylib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/mylib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mylib.dir/link.txt --verbose=$(VERBOSE)
 
