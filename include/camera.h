@@ -2,11 +2,13 @@
 
 #include "hittable.h"
 #include "include_these.h"
+#include "utils.h"
 
 class camera {
 public:
   double aspect_ratio = 16.0 / 9.0; // width/height
   int image_width = 400;
+  int samples_per_pixel = 100; // Count of random samples for each pixel
 
   void render(const hittable &world) {
     initialize();
@@ -22,13 +24,13 @@ public:
       for (double i = 0; i < image_width; i++) {
         // send ray toward every pixel from camera_center and write the color
         // observed
-        point pixel_center =
-            pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
-        vec ray_direction = pixel_center - camera_center;
-        ray r(camera_center, pixel_center);
-
-        color pixel_color = ray_color(r, world);
-        writePixel(myfile, pixel_color);
+        color pixel_color(0, 0, 0);
+        for (int sample = 0; sample < samples_per_pixel; sample++) {
+          ray r = get_ray(i, j);
+          pixel_color += ray_color(r, world);
+        }
+        auto t = pixel_samples_scale * pixel_color;
+        writePixel(myfile, t);
       }
       myfile << '\n';
     }
@@ -43,11 +45,14 @@ private:
   vec pixel_delta_u;
   vec pixel_delta_v;
   point camera_center;
+  double pixel_samples_scale; // color scale factor for a sum of pixel samples
 
   void initialize() {
     // define image height, ensure >= 1;
     image_height = int(image_width / aspect_ratio);
     image_height = (image_height < 1) ? 1 : image_height;
+
+    pixel_samples_scale = 1.0 / samples_per_pixel;
 
     // Camera
     // calculate viewport_width based on actual image_height and image_width;
@@ -69,6 +74,22 @@ private:
     // z. camera center - focalLength - viewport_u/2 - viewport_v/2
     pixel00_loc = camera_center - vec(0, 0, focalLength) - viewport_u / 2 -
                   viewport_v / 2;
+  }
+
+  ray get_ray(int i, int j) const {
+    // returns random ray from origin to randomly around pixel location (i, j);
+    auto offset = sample_square();
+    // given pixel location return ray
+    point pixel_center = pixel00_loc + ((i + offset.x()) * pixel_delta_u) +
+                         ((j + offset.y()) * pixel_delta_v);
+    vec ray_direction = pixel_center - camera_center;
+    ray r(camera_center, pixel_center);
+    return r;
+  }
+
+  vec sample_square() const {
+    // Returns the vector to a random point in unit square.
+    return vec(random_double() - 0.5, random_double() - 0.5, 0);
   }
 
   color ray_color(const ray &r, const hittable &world) {
