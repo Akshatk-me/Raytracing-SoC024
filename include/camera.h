@@ -96,7 +96,7 @@ private:
     hit_record rec;
     interval ray_t(0.001, infinity);
     if (world.hit(r, ray_t, rec) && depth >= 0) {
-      vec direction = random_on_hemisphere(rec.normal);
+      vec direction = rec.normal + random_unit_vector();
       return 0.5 * ray_color(ray(rec.p, direction), world, depth - 1);
     } else {
       auto x = r.getDirection().direction();
