@@ -43,4 +43,13 @@ vec vec::direction() const {
   return vec(value[0] / mag, value[1] / mag, value[2] / mag);
 }
 
+vec vec::random() {
+  return vec(random_double(), random_double(), random_double());
+}
+
+vec vec::random(double min, double max) {
+  return vec(random_double(min, max), random_double(min, max),
+             random_double(min, max));
+}
+
 // point is an alias for vec, it's better for providing geometric clarity

@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/bin.dir/main.cpp.o -o bin  libmylib.a
+/usr/bin/c++ -g CMakeFiles/bin.dir/main.cpp.o -o bin  libmylib.a

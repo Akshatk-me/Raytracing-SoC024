@@ -1,5 +1,6 @@
 #ifndef VECOPS_H // compile the later code only if VECOPS_H macro isn't defined.
 #define VECOPS_H // define VECOPS_H so this file can't be later included again.
+#include "utils.h"
 #include <iostream>
 
 class vec {
@@ -18,6 +19,8 @@ public:
   double magnitudeSquared() const;
   double magnitude() const;
   vec direction() const;
+  static vec random();
+  static vec random(double min, double max);
 };
 
 inline vec operator+(const vec &v1, const vec &v2) {
@@ -51,6 +54,28 @@ inline vec cross(const vec &v1, const vec &v2) {
   double z = v1.x() * v2.y() - v1.y() * v2.x();
   vec t = vec();
   return vec(x, y, z);
+}
+
+inline vec random_in_unit_sphere() {
+  // change the implementation to a better one
+  // for example generate using spherical coordinates
+  while (true) {
+    auto p = vec::random(-1, 1);
+    if (p.magnitudeSquared() < 1) {
+      return p;
+    }
+  }
+}
+
+inline vec random_unit_vector() { return random_in_unit_sphere().direction(); }
+
+inline vec random_on_hemisphere(const vec &normal) {
+  vec on_unit_sphere = random_unit_vector();
+  if (dot(on_unit_sphere, normal) > 0) {
+    return on_unit_sphere;
+  } else {
+    return -on_unit_sphere;
+  }
 }
 
 using point = vec;

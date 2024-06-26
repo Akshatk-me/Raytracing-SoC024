@@ -92,15 +92,18 @@ private:
     return vec(random_double() - 0.5, random_double() - 0.5, 0);
   }
 
-  color ray_color(const ray &r, const hittable &world) {
+  color ray_color(const ray &r, const hittable &world, int depth = 10) {
     hit_record rec;
-    interval ray_t(0, infinity);
-    if (world.hit(r, ray_t, rec)) {
-      return 0.5 * (rec.normal + color(1, 1, 1));
+    interval ray_t(0.001, infinity);
+    if (world.hit(r, ray_t, rec) && depth >= 0) {
+      vec direction = random_on_hemisphere(rec.normal);
+      return 0.5 * ray_color(ray(rec.p, direction), world, depth - 1);
     } else {
       auto x = r.getDirection().direction();
-      x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
-      return x;
+      auto a = 0.5 * (x.y() + 1.0);
+      // x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
+      return (1.0 - a) * color(1.0, 1.0, 1.0) + a * color(0.5, 0.7, 1.0);
+      // return x;
     }
   }
 };

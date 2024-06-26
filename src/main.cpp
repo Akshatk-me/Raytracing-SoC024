@@ -7,8 +7,8 @@
 int main() {
   // world
   hittable_list world;
-  world.add(make_shared<sphere>(point(0, -100.5, -1), 100));
-  world.add(make_shared<sphere>(point(0, 0, -1), 0.5));
+  world.add(make_shared<sphere>(point(0, -100.5, -1), 99.75));
+  world.add(make_shared<sphere>(point(0, 0, -1), 0.75));
 
   // camera
   camera cam;
