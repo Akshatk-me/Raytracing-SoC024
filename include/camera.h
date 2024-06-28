@@ -102,8 +102,8 @@ private:
       auto x = r.getDirection().direction();
       auto a = 0.5 * (x.y() + 1.0);
       // x = vec(abs(x.x()), abs(x.y()), abs(x.z()));
-      return (1.0 - a) * color(1.0, 1.0, 1.0) + a * color(0.5, 0.7, 1.0);
       // return x;
+      return (1.0 - a) * color(1.0, 1.0, 1.0) + a * color(0.5, 0.7, 1.0);
     }
   }
 };

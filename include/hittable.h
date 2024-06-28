@@ -6,11 +6,14 @@
 #include <memory>
 #include <vector>
 
+class material;
+
 class hit_record {
 public:
   point p;    // point of hit
   vec normal; // normal at point p
   double t;   // value of t for the ray.
+  std::shared_ptr<material> mat;
 
   bool front_face;
 
@@ -66,10 +69,14 @@ class sphere : public hittable {
 private:
   point center;
   double radius;
+  std::shared_ptr<material> mat;
 
 public:
   sphere(const point &center, double radius)
-      : center(center), radius((radius > 0.0) ? radius : 0.0) {}
+      : center(center), radius((radius > 0.0) ? radius : 0.0) {
+
+    // initialize mat here;
+  }
 
   bool hit(const ray &r, interval ray_t, hit_record &rec) const override {
     vec OC = center - r.getOrigin();
@@ -98,6 +105,7 @@ public:
     rec.p = r.at(rec.t);
     auto outward_normal = (rec.p - center) / radius;
     rec.set_face_normal(r, outward_normal);
+    rec.mat = mat;
 
     return true;
   }
