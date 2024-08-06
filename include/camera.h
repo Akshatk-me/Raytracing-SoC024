@@ -12,6 +12,10 @@ public:
   int image_width = 400;
   int samples_per_pixel = 100; // Count of random samples for each pixel
   int max_depth = 50;
+  double vfov = 90;
+  point lookfrom = point(0, 0, 0);
+  point lookat = point(0, 0, -1);
+  vec vup = vec(0, 1, 0);
 
   void render(const hittable &world) {
     initialize();
@@ -49,6 +53,7 @@ private:
   vec pixel_delta_v;
   point camera_center;
   double pixel_samples_scale; // color scale factor for a sum of pixel samples
+  vec u, v, w;
 
   void initialize() {
     // define image height, ensure >= 1;
@@ -59,15 +64,20 @@ private:
 
     // Camera
     // calculate viewport_width based on actual image_height and image_width;
-    double viewport_height = 4.0; // specified in some actual distance unit
+    camera_center = lookfrom;
+    double focalLength = (lookfrom - lookat).magnitude();
+    auto theta = degree_to_radians(vfov);
+    auto h = std::tan(theta / 2);
+    auto viewport_height = 2 * h * focalLength;
     double viewport_width =
         viewport_height * (double(image_width) / image_height);
-    double focalLength = 1.0;
-    camera_center = point(0, 0, 0);
 
+    w = (lookfrom - lookat).direction();
+    u = cross(vup, w).direction();
+    v = cross(w, u);
     // Calculate vectors across veiwport
-    vec viewport_u = vec(viewport_width, 0, 0);
-    vec viewport_v = vec(0, -viewport_height, 0);
+    vec viewport_u = viewport_width * u;
+    vec viewport_v = viewport_height * -v;
 
     // Both these are magnitude and dirn of each pixel along u and v.
     pixel_delta_u = viewport_u / image_width;
@@ -75,8 +85,9 @@ private:
 
     // Calculate the location of upper left pixel. fl, viewport_v are along -ve
     // z. camera center - focalLength - viewport_u/2 - viewport_v/2
-    pixel00_loc = camera_center - vec(0, 0, focalLength) - viewport_u / 2 -
-                  viewport_v / 2;
+    auto viewport_upper_left =
+        camera_center - (focalLength * w) - (viewport_u / 2) - (viewport_v / 2);
+    pixel00_loc = viewport_upper_left + 0.5 + (pixel_delta_u + pixel_delta_v);
   }
 
   ray get_ray(int i, int j) const {

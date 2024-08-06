@@ -84,6 +84,14 @@ inline vec random_on_hemisphere(const vec &normal) {
 
 inline vec reflect(const vec &v, const vec &n) { return v - 2 * dot(v, n) * n; }
 
+inline vec refract(const vec &uv, const vec &n, double etai_over_etat) {
+  auto cos_theta = std::fmin(dot(-uv, n), 1.0);
+  vec r_out_perp = etai_over_etat * (uv + cos_theta * n);
+  vec r_out_parallel =
+      -std::sqrt(std::fabs(1.0 - r_out_perp.magnitudeSquared())) * n;
+  return r_out_perp + r_out_parallel;
+}
+
 using point = vec;
 
 #endif
