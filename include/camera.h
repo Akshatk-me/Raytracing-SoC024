@@ -2,13 +2,16 @@
 
 #include "hittable.h"
 #include "include_these.h"
+#include "material.h"
 #include "utils.h"
+#include "vecops.h"
 
 class camera {
 public:
   double aspect_ratio = 16.0 / 9.0; // width/height
   int image_width = 400;
   int samples_per_pixel = 100; // Count of random samples for each pixel
+  int max_depth = 50;
 
   void render(const hittable &world) {
     initialize();
@@ -27,7 +30,7 @@ public:
         color pixel_color(0, 0, 0);
         for (int sample = 0; sample < samples_per_pixel; sample++) {
           ray r = get_ray(i, j);
-          pixel_color += ray_color(r, world);
+          pixel_color += ray_color(r, world, max_depth);
         }
         auto t = pixel_samples_scale * pixel_color;
         writePixel(myfile, t);
@@ -94,10 +97,15 @@ private:
 
   color ray_color(const ray &r, const hittable &world, int depth = 10) {
     hit_record rec;
-    interval ray_t(0.001, infinity);
+    interval ray_t(0.001, 10000);
     if (world.hit(r, ray_t, rec) && depth >= 0) {
-      vec direction = rec.normal + random_unit_vector();
-      return 0.5 * ray_color(ray(rec.p, direction), world, depth - 1);
+      ray scattered;
+      color attenuation;
+      if (rec.mat->scatter(r, rec, attenuation, scattered)) {
+        return attenuation * ray_color(scattered, world, depth - 1);
+      }
+      // vec direction = rec.normal + random_unit_vector();
+      return color(0, 0, 0);
     } else {
       auto x = r.getDirection().direction();
       auto a = 0.5 * (x.y() + 1.0);

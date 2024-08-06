@@ -72,11 +72,8 @@ private:
   std::shared_ptr<material> mat;
 
 public:
-  sphere(const point &center, double radius)
-      : center(center), radius((radius > 0.0) ? radius : 0.0) {
-
-    // initialize mat here;
-  }
+  sphere(const point &center, double radius, shared_ptr<material> mat)
+      : center(center), radius((radius > 0.0) ? radius : 0.0), mat(mat) {}
 
   bool hit(const ray &r, interval ray_t, hit_record &rec) const override {
     vec OC = center - r.getOrigin();

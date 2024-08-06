@@ -16,6 +16,12 @@ vec vec::operator-() const { return vec(-value[0], -value[1], -value[2]); }
 double vec::operator[](int i) const { return value[i]; };
 double &vec::operator[](int i) { return value[i]; };
 
+bool vec::near_zero() const {
+  auto s = 1e-8;
+  return (std::fabs(value[0]) < s) &&
+         (std::fabs(value[1] < s) && (std::fabs(value[2]) < s));
+}
+
 vec vec::operator+=(const vec &v) {
   value[0] += v.x();
   value[1] += v.y();

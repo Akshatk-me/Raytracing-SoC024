@@ -21,6 +21,7 @@ public:
   vec direction() const;
   static vec random();
   static vec random(double min, double max);
+  bool near_zero() const;
 };
 
 inline vec operator+(const vec &v1, const vec &v2) {
@@ -34,6 +35,9 @@ inline vec operator*(const vec &v, const double t) {
 } // scalar multiplication
 inline vec operator*(const double t, const vec &v) {
   return vec(v.x() * t, v.y() * t, v.z() * t);
+}
+inline vec operator*(const vec &v1, const vec &v2) {
+  return vec(v1.x() * v2.x(), v1.y() * v2.y(), v1.z() * v2.z());
 }
 inline vec operator/(const vec &v, const double t) {
   return v * (1.0 / t);
@@ -77,6 +81,8 @@ inline vec random_on_hemisphere(const vec &normal) {
     return -on_unit_sphere;
   }
 }
+
+inline vec reflect(const vec &v, const vec &n) { return v - 2 * dot(v, n) * n; }
 
 using point = vec;
 
