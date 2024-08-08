@@ -82,6 +82,14 @@ inline vec random_on_hemisphere(const vec &normal) {
   }
 }
 
+inline vec random_in_unit_disk() {
+  while (true) {
+    auto p = vec(random_double(-1, 1), random_double(-1, 1), 0);
+    if (p.magnitudeSquared() < 1)
+      return p;
+  }
+}
+
 inline vec reflect(const vec &v, const vec &n) { return v - 2 * dot(v, n) * n; }
 
 inline vec refract(const vec &uv, const vec &n, double etai_over_etat) {
